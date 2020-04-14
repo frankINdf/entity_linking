@@ -1,0 +1,13 @@
+entity linking
+End-to-End Neural Entity Linking
+Nikolaos Kolitsas, Octavian-Eugen Ganea, Thomas Hofmann
+(Submitted on 23 Aug 2018 (v1), last revised 29 Aug 2018 (this version, v2))
+一般方法是MD(mention detection)和ED(entity disambiguation),这篇文章提到了端到端的做法
+所有可能是实体的span当成候选，计算和实体的文本相似度
+关键点：context-aware mention embeddings, entity embeddings and a probabilistic mention - entity map
+解决 [上海]俱乐部 这种问题
+贡献：
+1.需要的负例很少2.可以不用其他特征工程3.可迁移性
+词向量 word2vec + char embedding
+拼接首尾+soft_head(通过注意力得到)
+为了表示非线性，增加了FFN

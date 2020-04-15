@@ -31,3 +31,46 @@ Experiments demonstrate state-of-the-art performance, with a gain of 1.5 F1 on t
 认为的不足
 (1) parsing mistakes can introduce cascading errors and (2) many of the handengineered rules do not generalize to new languages.
 
+Investigating Entity Knowledge in BERT with Simple Neural End-To-End Entity Linking
+
+问题
+Can all those steps be learned jointly with a model for contextualized text-representations, i.e. BERT
+How much entity knowledge is already contained in pretrained BERT
+Does additional entity knowledge improve BERT’s performance in downstream tasks
+
+初始化公开参数
+and add an output classification layer on top of the architecture.
+Given a contextualized token, the classifier computes the probability of an entity link for each entry in the entity vocabulary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

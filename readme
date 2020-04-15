@@ -11,3 +11,23 @@ Nikolaos Kolitsas, Octavian-Eugen Ganea, Thomas Hofmann
 词向量 word2vec + char embedding
 拼接首尾+soft_head(通过注意力得到)
 为了表示非线性，增加了FFN
+
+
+End-to-end Neural Coreference Resolution
+第一篇端到端 指代消解论文
+1.候选实体选取
+consider all spans in a document as potential mentions and learn distributions over possible antecedents for each
+2.边界获取
+暴力法，得到N(N+1)/2
+The model computes span embeddings that combine context-dependent boundary representations with a headfinding attention mechanism.
+3.损失函数
+maximize the marginal likelihood of gold antecedent spans from coreference clusters
+挑战：复杂度高，使用了剪枝，剪枝方案：得到unary score后，选取lambda*N个,lambda0.4时是92%
+每个span之间进行attention，得到span的权重X，concatstart\end\X\pusai 得到gi（qa问题会用到start\end）
+
+4.成果
+Experiments demonstrate state-of-the-art performance, with a gain of 1.5 F1 on the OntoNotes benchmark and by 3.1 F1 using a 5-model ensemble, despite the fact that this is the first approach to be successfully trained with no external resources.
+
+认为的不足
+(1) parsing mistakes can introduce cascading errors and (2) many of the handengineered rules do not generalize to new languages.
+

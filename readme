@@ -34,13 +34,49 @@ Experiments demonstrate state-of-the-art performance, with a gain of 1.5 F1 on t
 Investigating Entity Knowledge in BERT with Simple Neural End-To-End Entity Linking
 
 问题
+一个模型能不能做所有
 Can all those steps be learned jointly with a model for contextualized text-representations, i.e. BERT
+bert里面有多少信息
 How much entity knowledge is already contained in pretrained BERT
+额外的实体信息能否提升下游任务的表现
 Does additional entity knowledge improve BERT’s performance in downstream tasks
 
 初始化公开参数
 and add an output classification layer on top of the architecture.
 Given a contextualized token, the classifier computes the probability of an entity link for each entry in the entity vocabulary
+转换为由词预测标签
+cast it as a per token classification over the entire entity vocabulary
+700k高频英文维基实体数据
+训练数据来自英文维基百科
+训练步骤
+1.训练bert
+first trained BERT-base-uncased on EnglishWikipedia (dubbed BERT+Entity)
+2.在实体链接标准集上微调
+fine-tuned and evaluated it on an entity linking benchmark
+
+we do not have any supervision on mention-spans.An error analysis with validation data revealed that only 3% of errors are purely due
+to span errors,while most errors are due to wrong Nil predictions which often coincided with entities being infrequent.
+其他实验
+1.固定bert的参数
+Frozen-BERT+Entity is 6% below BERT+Entity, showing that BERT+Entity has learned additional entity knowledge.
+2.额外实体信息能否提升结果
+GLUE(语义理解) SQUAD(阅读理解) SWAG(阅读理解) EN-DE WMT(翻译)
+neither helpful for the two QA datasets nor for machine translation, GLUE in which BERT+Entity improves 2%
+
+
+we initialize BERT with the publicly available weights from the BERT-base-uncased model
+add an output classification layer on top of the architecture
+增加了一个分类层
+Given a contextualized token, the classifier computes the probability of an entity link for each entry in the entity vocabulary
+计算每个实体的概率
+with jKBj being the number of entities in the KB
+KB是entities的数量
+ci是第i个的vec
+p(j|v,h) the i-th token in context h — linking to entity j is computed by 激活函数
+训练数据
+
+
+
 
 
 

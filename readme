@@ -74,6 +74,28 @@ KB是entities的数量
 ci是第i个的vec
 p(j|v,h) the i-th token in context h — linking to entity j is computed by 激活函数
 训练数据
+来自维基百科
+The first Thor was all about introducing Asgard
+a larger context can help to disambiguate entity mentions, which is why we select text fragments of such a length, that they span multiple
+sentences
+(i) We only select text fragments that contain a minimum count of annotated Wikipedia links.
+(ii) To account for unlinked mentions in the fragments we use a Trie-based matcher to annotate all occurrences of linkable strings that we collected in M
+
+data
+We keep the 700K top most frequent entities from the  6M entities in Wikipedia
+We chunk the Wikipedia texts into fragments with a length of 110 tokens and an overlap of 20 tokens with the previous and following fragment
+We only keep fragments that contain at least 1 infrequent linked entity or at least 3 frequent ones
+This yields 8; 8M training instances from which we take 1000 each for validation and testing
+
+We keep the 500K top most frequent entities
+1000 entities from CoNLL03/AIDA to the entity vocabulary
+fragment size to 250 tokens and keep fragments that contain at least 1 linked entity but keep at most 500 fragments per entity
+This yields 2; 4M training instances from which we take 500 each for validation and testing
+
+词表太大就 negative sampling
+
+
+
 
 
 

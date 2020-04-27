@@ -94,7 +94,12 @@ This yields 2; 4M training instances from which we take 500 each for validation 
 
 词表太大就 negative sampling
 
+Improving Entity Linking by Modeling Latent Entity Type Information
+使用bert来表示entity
 
+we propose to model a mention’s immediate context using BERT (Devlin et al. 2019) to capture its contextual latent entity type information.
+上下文的信息也用bert
+平均entity 向量得到 
 
 
 

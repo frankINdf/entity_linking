@@ -1,0 +1,11 @@
+VGCN-BERT: Augmenting BERT with Graph Embedding for Text Classification
+their ability of capturing the global information about the vocabulary of a language is more limited
+获得实体信息的能力受限
+combines the capability of BERT with a Vocabulary Graph Convolutional Network (VGCN)
+联合使用BERT和图嵌入
+The problem stems from the fact that the representation is generated from a sentence or a document only, without taking into account explicitly the knowledge about the language
+问题是这些模型只能得到一个文章或者句子的表示，没有考虑知识
+The word embedding and graph embedding then interact with each other through the self-attention mechanism while learning the classifier
+通过self attention机制用word embedding和graph embedding进行分类
+Combining global and local information
+Interaction between local and global information through attention mechanism

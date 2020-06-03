@@ -1,1 +1,15 @@
+dbscan
+参数：eps 范围,min_samples最小样本数，metric度量参数
+算法：
+1.暴力算法
 
+概念：
+密度可达：
+密度直达：
+
+评测指标：
+metrics.silhouette_score 对于单个样本，a是同类其他样本平均距离，b是距离最近的不同样本平均距离 s=(b-a)/max(a,b),范围[-1,1]
+metrics.calinski_harabaz_score:类别内部协方差越小越好，类别之间协方差越大越好。组间协方差很小，组与组之间界限不明显。
+metrics.homogeneity_score 同质性和完整性，同质性
+metrics.adjusted_rand_score 兰德系数 （a+b）/元素对数C（n,2）,a 两个cluster同一cluster的对象数，b为u中统一cluster，v中不同的数量，c中不同，v中不同,
+d都不同 （a+d）/（a+b+c+d）

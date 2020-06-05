@@ -13,3 +13,40 @@ metrics.calinski_harabaz_score:类别内部协方差越小越好，类别之间�
 metrics.homogeneity_score 同质性和完整性，同质性
 metrics.adjusted_rand_score 兰德系数 （a+b）/元素对数C（n,2）,a 两个cluster同一cluster的对象数，b为u中统一cluster，v中不同的数量，c中不同，v中不同,
 d都不同 （a+d）/（a+b+c+d）
+4w条结果
+eps is 0.3, min_samples is 4
+silhouette_score is -0.04803989997732979
+calinski_score is 17.637694955073666
+85.34940552711487
+eps is 0.3, min_samples is 20
+silhouette_score is -0.11251830358129965
+calinski_score is 68.6597446358362
+85.83190274238586
+eps is 0.3, min_samples is 50
+silhouette_score is -0.09802631661486477
+calinski_score is 146.74308653619602
+86.07414078712463
+eps is 0.6, min_samples is 4
+silhouette_score is 0.020222119291554697
+calinski_score is 44.97031851138117
+84.87765264511108
+eps is 0.6, min_samples is 20
+silhouette_score is 0.043149579682814215
+calinski_score is 165.58814784227613
+85.19741582870483
+eps is 0.6, min_samples is 50
+silhouette_score is 0.0514637504286123
+calinski_score is 353.7916720972157
+85.6568398475647
+eps is 0.8, min_samples is 4
+silhouette_score is -0.02128552415488614
+calinski_score is 17.10022079359792
+85.55048131942749
+eps is 0.8, min_samples is 20
+silhouette_score is 0.051765204451357225
+calinski_score is 139.66287873347636
+84.86973595619202
+eps is 0.8, min_samples is 50
+silhouette_score is 0.07726284690199042
+calinski_score is 325.1196298119718
+85.22481155395508

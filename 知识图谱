@@ -1,1 +1,12 @@
 互联网人物摘要知识图谱构建方法研究
+图谱表示：
+语义网络：节点和边无标准值，多源数据无法融合，没有节点和对象概念，无法定义节点和边的标签
+rdf：统一了关系，但是
+International Resource Identifiers(IRIs)，blank nodes 和 literals
+IRI定义了一个实体/资源
+literal是字面量，我们可以把它看做是带有数据类型的纯文本
+rdfs
+owl
+Subject可以是IRI或blank node。
+Predicate是IRI。
+Object三种类型都可以
